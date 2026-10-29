@@ -18,5 +18,5 @@ test('retryDelay: перед спробою 5, останньою, систем�
 });
 
 test('retryDelay: після п’яти спроб система більше не пробує', () => {
-  expect(retryDelay(6)).toBeNull();
+  expect(retryDelay(6)).toBe(null);
 });
