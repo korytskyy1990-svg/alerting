@@ -28,3 +28,12 @@ export function createAlert(level, text) {
   }
   return { level: level, text: text, sent: false };
 }
+export function pending(alerts) {
+  const result = [];
+  for (const alert of alerts) {
+    if (!alert.sent) {
+      result.push(alert);
+    }
+  }
+  return result;
+}
